@@ -16,9 +16,14 @@
     {
         #region constructors and destructors
 
+        /// <summary>
+        /// Default ctor.
+        /// </summary>
+        /// <param name="openAiOptions">The OpenAI specific options.</param>
         public OpenAiLogic(IOptions<OpenAiOptions> openAiOptions)
         {
             OpenAiOptions = openAiOptions.Value;
+            //TODO: Configure system prompt in seperate text file.
             ChatSession.Add(new SystemChatMessage("You are a helpful assistant."));
         }
 
@@ -26,10 +31,11 @@
 
         #region explicit interfaces
 
+        /// <inheritdoc />
         public async Task GetStreamedCompletion(string userPrompt, Func<string, Task> onChunkReceived)
         {
             var openAiClient = new OpenAIClient(OpenAiOptions.ApiKey);
-            var client = openAiClient.GetChatClient("gpt-4");
+            var client = openAiClient.GetChatClient(OpenAiOptions.Model);
             ChatSession.Add(new UserChatMessage(userPrompt));
             var fullResponse = string.Empty;
             try
