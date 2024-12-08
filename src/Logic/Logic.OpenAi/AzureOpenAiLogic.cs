@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Logic.OpenAi
+﻿namespace Logic.OpenAI
 {
-    internal class AzureOpenAiLogic
+    /// <summary>
+    /// Logic to access OpenAI models deployed in Azure OpenAI.
+    /// </summary>
+    public class AzureOpenAiLogic
     {
     }
 }

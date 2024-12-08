@@ -7,11 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ui", "Ui", "{5624CBCC-52D4-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{3C330DDF-F719-4095-A62E-01DCD8B55676}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ui.Console", "src\Ui\Ui.Console\Ui.Console.csproj", "{D0B03D2F-7DEC-424A-9295-E64EDBE65971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ui.Console", "src\Ui\Ui.Console\Ui.Console.csproj", "{D0B03D2F-7DEC-424A-9295-E64EDBE65971}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.OpenAi", "src\Logic\Logic.OpenAi\Logic.OpenAi.csproj", "{D8BC16C4-97B5-4606-8780-38452BF09975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.OpenAi", "src\Logic\Logic.OpenAi\Logic.OpenAi.csproj", "{D8BC16C4-97B5-4606-8780-38452BF09975}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Interfaces", "src\Logic\Logic.Interfaces\Logic.Interfaces.csproj", "{D74BF8B7-6C17-4527-936D-8EB60881C973}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Interfaces", "src\Logic\Logic.Interfaces\Logic.Interfaces.csproj", "{D74BF8B7-6C17-4527-936D-8EB60881C973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Models", "src\Logic\Logic.Models\Logic.Models.csproj", "{2C53675D-BFC5-41C2-980B-705CCA291B24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0666410D-BE2F-4BBC-80D3-23ABD0555975}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.CoreApi", "src\Services\Services.CoreApi\Services.CoreApi.csproj", "{5EF57FF4-D37B-4022-AFA9-BC84B918E4D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +37,14 @@ Global
 		{D74BF8B7-6C17-4527-936D-8EB60881C973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D74BF8B7-6C17-4527-936D-8EB60881C973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D74BF8B7-6C17-4527-936D-8EB60881C973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C53675D-BFC5-41C2-980B-705CCA291B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C53675D-BFC5-41C2-980B-705CCA291B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C53675D-BFC5-41C2-980B-705CCA291B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C53675D-BFC5-41C2-980B-705CCA291B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF57FF4-D37B-4022-AFA9-BC84B918E4D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF57FF4-D37B-4022-AFA9-BC84B918E4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF57FF4-D37B-4022-AFA9-BC84B918E4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF57FF4-D37B-4022-AFA9-BC84B918E4D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +53,8 @@ Global
 		{D0B03D2F-7DEC-424A-9295-E64EDBE65971} = {5624CBCC-52D4-47D6-B127-5FD9EA3BE0BD}
 		{D8BC16C4-97B5-4606-8780-38452BF09975} = {3C330DDF-F719-4095-A62E-01DCD8B55676}
 		{D74BF8B7-6C17-4527-936D-8EB60881C973} = {3C330DDF-F719-4095-A62E-01DCD8B55676}
+		{2C53675D-BFC5-41C2-980B-705CCA291B24} = {3C330DDF-F719-4095-A62E-01DCD8B55676}
+		{5EF57FF4-D37B-4022-AFA9-BC84B918E4D1} = {0666410D-BE2F-4BBC-80D3-23ABD0555975}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A0555E2-F5C4-4878-8A8B-DB1ED3493F11}
