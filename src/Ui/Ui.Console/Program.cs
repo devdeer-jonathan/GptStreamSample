@@ -1,8 +1,6 @@
 ﻿using devdeer.Libraries.Abstractions.Extensions;
 
-using Logic.Interfaces.Logic;
 using Logic.Models.Options;
-using Logic.OpenAI;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
