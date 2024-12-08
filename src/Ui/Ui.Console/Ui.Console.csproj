@@ -15,4 +15,9 @@
     <ProjectReference Include="..\..\Logic\Logic.Models\Logic.Models.csproj" />
     <ProjectReference Include="..\..\Logic\Logic.OpenAI\Logic.OpenAI.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

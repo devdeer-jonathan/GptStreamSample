@@ -10,17 +10,19 @@ using Microsoft.Extensions.Hosting;
 
 using Ui.Console;
 
-var builder = Host.CreateDefaultBuilder(args).ConfigureAppConfiguration(
-        (ctx, builder) =>
+var builder = Host.CreateDefaultBuilder(args)
+    .ConfigureAppConfiguration(
+        (_, builder) =>
         {
             builder.AddUserSecrets(typeof(Program).Assembly);
         })
-    .ConfigureServices((hostContext, services) =>
-    {
-        // TODO add your service dependencies here
-        services.AddSingleton<App>();
-        services.AddTransient<IOpenAiLogic, OpenAiLogic>();
-        services.RegisterOption<OpenAiOptions>("OpenAI");
-    });
+    .ConfigureServices(
+        (_, services) =>
+        {
+            services.AddSingleton<App>();
+            services.AddTransient<IOpenAiLogic, OpenAiLogic>();
+            services.RegisterOption<OpenAiOptions>("OpenAi");
+        });
 var app = builder.Build();
-return await app.Services.GetRequiredService<App>().StartAsync(Environment.GetCommandLineArgs());
+return await app.Services.GetRequiredService<App>()
+    .StartAsync(Environment.GetCommandLineArgs());

@@ -7,10 +7,17 @@
 
     using Microsoft.AspNetCore.Mvc;
 
+    /// <summary>
+    /// Contains chat related endpoints.
+    /// </summary>
     public class ChatController : ControllerBase
     {
         #region constructors and destructors
 
+        /// <summary>
+        /// Default ctor.
+        /// </summary>
+        /// <param name="openAiLogic">The logic to interact with OpenAI models.</param>
         public ChatController(IOpenAiLogic openAiLogic)
         {
             OpenAiLogic = openAiLogic;
@@ -20,6 +27,11 @@
 
         #region methods
 
+        /// <summary>
+        /// Streams the response from the model as it is being generated.
+        /// </summary>
+        /// <param name="chatRequest">The chat request.</param>
+        /// <returns>A task representing the operation.</returns>
         [HttpPost("StreamCompletion")]
         public async Task StreamChatResponse([FromBody] ChatRequestModel chatRequest)
         {
