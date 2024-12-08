@@ -7,7 +7,7 @@ A simple proof of concept project demonstrating the streaming capabilities of GP
 Prerequisites
 
 - .NET 8
-- An OpenAI API Key
+- An OpenAI API Key (For DEVDEER members this can be found in the 1Password password manager)
 - The dotnet user-secrets CLI tool
 
 ## Features
