@@ -5,6 +5,7 @@
     using Logic.Interfaces.Logic;
     using Logic.Models;
 
+    using Microsoft.AspNetCore.Http.Features;
     using Microsoft.AspNetCore.Mvc;
 
     /// <summary>
@@ -36,6 +37,7 @@
         public async Task StreamChatResponse([FromBody] ChatRequestModel chatRequest)
         {
             Response.ContentType = "text/event-stream";
+            HttpContext.Features.Get<IHttpResponseBodyFeature>()?.DisableBuffering();
             Response.StatusCode = 200;
             try
             {

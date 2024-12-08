@@ -19,25 +19,22 @@ Prerequisites
 
 1.  Set Up OpenAI API Key for Local Development
     To securely store your OpenAI API key for local development, use the dotnet user-secrets tool:
-    To initalize the use of dotnet user-secrets run the following commands in the root folder of the project:
+    To initialize the use of dotnet user-secrets run the following commands in the root folder of the project:
+    For the API:
+    `dotnet user-secrets init --project ./src/Services/Services.CoreApi`
+    `dotnet user-secrets set 'OpenAi:ApiKey' '[YourApiKey]'`
 
-    1. For the Console UI:
-       `dotnet user-secrets init --project ./src/Ui/Ui.Console`
-       `dotnet user-secrets set 'OpenAi:ApiKey' '[YourApiKey]'`
-    2. For the API:
-       `dotnet user-secrets init --project ./src/Services/Services.CoreApi`
-       `dotnet user-secrets set 'OpenAi:ApiKey' '[YourApiKey]'`
+2.  API Streaming
 
-2.  Running the Console Application
-    To run the application and see the streaming in the console:
-    1. Set Ui.Console as the startup project in your IDE (such as Visual Studio or Rider).
-    2. Or, run the following command in the root folder of the project:
-       `dotnet run --project .\src\Ui\Ui.Console\Ui.Console.csproj`
-    3. You can chat with a GPT-4 model. To properly display the streaming capabilities aim for long answer with prompts such as `Tell me a short story.`
-       You can also ask follow-up questions within a session.
-3.  API Streaming
-    1. Set Services.CoreApi as the startup project in your IDE (such as Visual Studio or Rider).
+    1. Add the Services.CoreApi to the startup projects in your IDE (such as Visual Studio or Rider).
     2. Or, run the following command in the root folder of the project:
        `dotnet run --project .\src\Services\Services.CoreApi\Services.CoreApi.csproj`
     3. Follow the swagger documentation to test the endpoint.
-       **Note this is still in development and not fully tested.**
+
+3.  Running the Console Application
+    To run the application and see the streaming in the console:
+    1. Add the Ui.Console to the startup projects in your IDE (such as Visual Studio or Rider).
+    2. Or, run the following command in the root folder of the project:
+       `dotnet run --project .\src\Ui\Ui.Console\Ui.Console.csproj`
+    3. With both projects running you can chat with a GPT-4 model. To properly display the streaming capabilities aim for long answer with prompts such as `Tell me a short story.`
+       You can also ask follow-up questions within a session.
