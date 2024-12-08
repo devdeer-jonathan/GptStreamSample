@@ -3,7 +3,7 @@
     /// <summary>
     /// Must be implemented by all logic interacting with OpenAI.
     /// </summary>
-    public interface IOpenAiLogic
+    public interface IOpenAILogic
     {
         #region methods
 

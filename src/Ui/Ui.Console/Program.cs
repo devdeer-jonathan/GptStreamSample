@@ -18,15 +18,14 @@ var builder = Host.CreateDefaultBuilder(args)
     .ConfigureServices(
         (_, services) =>
         {
-            services.AddSingleton<App>();
-            services.RegisterOption<OpenAiOptions>("OpenAi");
-            services.AddHttpClient<Program>();
+            services.AddHttpClient<App>();
+            services.RegisterOption<OpenAIOptions>(OpenAIOptions.ConigurationKey);
         })
     .ConfigureLogging(
         logging =>
         {
-            logging.AddConsole();
-            logging.AddFilter("System.Net.Http", LogLevel.Warning);
+            logging.ClearProviders();
+            logging.AddDebug();
         });
 var app = builder.Build();
 return await app.Services.GetRequiredService<App>()

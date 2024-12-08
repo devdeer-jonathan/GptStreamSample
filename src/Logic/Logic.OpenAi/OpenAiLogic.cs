@@ -12,7 +12,7 @@
     /// <summary>
     /// Logic to interact with OpenAI.
     /// </summary>
-    public class OpenAiLogic : IOpenAiLogic
+    public class OpenAILogic : IOpenAILogic
     {
         #region constructors and destructors
 
@@ -20,7 +20,7 @@
         /// Default ctor.
         /// </summary>
         /// <param name="openAiOptions">The OpenAI specific options.</param>
-        public OpenAiLogic(IOptions<OpenAiOptions> openAiOptions)
+        public OpenAILogic(IOptions<OpenAIOptions> openAiOptions)
         {
             OpenAiOptions = openAiOptions.Value;
             //TODO: Configure system prompt in seperate text file.
@@ -46,7 +46,7 @@
                     {
                         continue;
                     }
-                    var chunk = result.ContentUpdate[0].Text;
+                    var chunk = result.ContentUpdate.First().Text;
                     fullResponse += chunk;
                     await onChunkReceived(chunk);
                 }
@@ -65,7 +65,7 @@
         /// <summary>
         /// The OpenAI specific options.
         /// </summary>
-        public OpenAiOptions OpenAiOptions { get; }
+        public OpenAIOptions OpenAiOptions { get; }
 
         /// <summary>
         /// A simple implementation of a chat session to create a chat session for locale development.

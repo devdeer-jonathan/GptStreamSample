@@ -19,7 +19,7 @@
         /// Default ctor.
         /// </summary>
         /// <param name="openAiLogic">The logic to interact with OpenAI models.</param>
-        public ChatController(IOpenAiLogic openAiLogic)
+        public ChatController(IOpenAILogic openAiLogic)
         {
             OpenAiLogic = openAiLogic;
         }
@@ -62,7 +62,7 @@
 
         #region properties
 
-        public IOpenAiLogic OpenAiLogic { get; }
+        public IOpenAILogic OpenAiLogic { get; }
 
         #endregion
     }

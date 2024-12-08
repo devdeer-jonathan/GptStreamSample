@@ -3,8 +3,14 @@
     /// <summary>
     /// The OpenAI specific configurations.
     /// </summary>
-    public class OpenAiOptions
+    public class OpenAIOptions
     {
+        #region constants
+
+        public static readonly string ConigurationKey = "OpenAi";
+
+        #endregion
+
         #region properties
 
         /// <summary>
