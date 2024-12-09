@@ -34,7 +34,7 @@ Prerequisites
 `dotnet run --project .\src\Services\Services.CoreApi\Services.CoreApi.csproj`
     3.  Follow the swagger documentation to test the endpoint.
 
-5.  Running the Console Application
+4.  Running the Console Application
     To run the application and see the streaming in the console:
     1. Add the Ui.Console to the startup projects in your IDE (such as Visual Studio or Rider).
     2. Or, run the following command in the root folder of the project:
