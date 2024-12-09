@@ -29,12 +29,12 @@ Prerequisites
 3.  API Streaming
 
     1. Add the Services.CoreApi to the startup projects in your IDE (such as Visual Studio or Rider).
-    2. Or, run the following command in the root folder of the project:  
+    2. Or, run the following command in the root folder of the project: 
 
     `dotnet run --project .\src\Services\Services.CoreApi\Services.CoreApi.csproj`
     3. Follow the swagger documentation to test the endpoint.
 
-4.  Running the Console Application
+5.  Running the Console Application
     To run the application and see the streaming in the console:
     1. Add the Ui.Console to the startup projects in your IDE (such as Visual Studio or Rider).
     2. Or, run the following command in the root folder of the project:
