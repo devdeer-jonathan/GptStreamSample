@@ -23,6 +23,7 @@ Prerequisites
     For the API:
     
     `dotnet user-secrets init --project ./src/Services/Services.CoreApi`
+
     `dotnet user-secrets set 'OpenAi:ApiKey' '[YourApiKey]' --project .\src\Services\Services.CoreApi`
 
 3.  API Streaming
